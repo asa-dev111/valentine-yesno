@@ -1,21 +1,30 @@
 <!doctype html>
-<html lang="ja">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Be my Valentine?</title>
+  <meta name="robots" content="noindex,nofollow" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <main class="card">
-    <h1>Will you be my Valentine??</h1>
+    <h1 class="title">Will you be my Valentine?</h1>
 
-    <div class="btn-area" id="area">
-      <button class="btn yes" id="yesBtn">YES 💘</button>
-      <button class="btn no" id="noBtn">NO 😶</button>
+    <div class="btn-area" id="area" aria-label="Valentine choices">
+      <button class="btn yes" id="yesBtn" type="button">YES 💘</button>
+      <button class="btn no" id="noBtn" type="button">NO 😶</button>
     </div>
 
     <p class="msg" id="msg" aria-live="polite"></p>
+
+    <section class="success hidden" id="success" aria-live="polite">
+      <h2 class="successTitle">Yay!! 💘</h2>
+      <p class="successText">It’s a date. I can’t wait to see you!</p>
+      <button class="btn small" id="copyBtn" type="button">Copy link</button>
+    </section>
+
+    <canvas id="confetti" class="confetti" width="1" height="1" aria-hidden="true"></canvas>
   </main>
 
   <script src="script.js"></script>
